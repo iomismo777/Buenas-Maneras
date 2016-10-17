@@ -71,29 +71,18 @@ var pixgrid = function() {
         }, !1);
     }
 }();
+
 (function() {
-  var $, fill;
-
   $ = require('jquery');
-
-  (fill = function(item) {
-    return $('.tagline').append("" + item);
-  })('Creative minds in Art');
-
-  fill;
-
-}).call(this);
-
-$(function() {
   var Mustache = require('mustache');
-
+ 
   $.getJSON('js/data.json', function(data) {
     var template = $('#speakerstpl').html();
     var html = Mustache.to_html(template, data);
     $('#speakers').html(html);    
   }); //getJSON
   
-}); //function
+})(); //function
 },{"jquery":2,"mustache":3}],2:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v3.1.1
